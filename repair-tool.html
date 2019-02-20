@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build Conflicts in The Wild</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script>
+        $(function(){
+            $("#includedContent").load("content.html");
+        });
+    </script>
+  </head>
+  <body style="font-family:verdana;">
+    <header>
+      <div class="top">
+		  <div class="container">
+		      <div class="row">
+		          <div class="col-sm-6">
+		              <p>Build Conflicts in The Wild</p>
+		          </div>
+		      </div>
+		  </div>
+		</div>
+		<nav class="navbar navbar-default">
+			<div class="container">
+			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
+		    	<ul class="nav navbar-nav main-navbar-nav">
+		        	<li class="active"><a href="main.html" title="">HOME</a></li>
+		        	<li class="dropdown">
+		            	<a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conflicts <span class="caret"></span></a>
+		            	<ul class="dropdown-menu">
+		                	<li><a href="build-conflicts.html" title="">Build Conflicts</a></li>
+		            	</ul>
+		        	</li>
+		        	<li><a href="sample.html" title="">Sample</a></li>
+		    	</ul>                           
+			</div>        
+			</div>
+		</nav>
+    </header>
+    <div class="bread_area">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                   <ol class="breadcrumb">
+                      <li><a href="main.html">Home</a></li>
+                      <li class="active">Build Conflict Repair Prototype</li>
+                  </ol>                  
+              </div>
+          </div>
+      </div>
+    </div>
+    <main class="site-main page-main">
+        <div class="container">
+            <div class="row">
+                <section class="page col-sm-9">
+                  <h2> Build Conflict Repair Prototype </h2>
+                  <div class="abstract"> 
+                    
+                  </div>
+				    </div>
+
+          <div class="row">
+            <section class="page col-sm-9">
+            <p>Based on our <a href="build-conflicts.html" title="" target="_blank">catalogue of build conflicts</a>, we developed a Build Conflict Repair Prototype, which can identify and recommends fixes for <i>Unavailable Symbol</i> build conflicts caused by deleted local variables.</p>
+
+            <p>Once the tool verifies a build conflict has happened, it uses our scripts to classify the conflict. In case the conflict was caused by <i>Unavailable Symbol</i> of local variables, the tool further investigated the new variable name. After that, the fix recommends by the tool is to update the dangling reference for its nem name. If the developer accepts the recommendation, a new commit is created and the necessary changes are applied. </p>
+
+            <p>For future work, we plan to evolve this prototype to cover the remaining builc conflict causes of our catalogue. The prototype in available on <a href="https://github.com/build-test-conflicts/FixMissingVar" title="" target="_blank">GitHub</a>. You can find there information and additional instructions to use the tool.</p>
+
+            <p>In case of any problems or questions, please contact us.</p>
+          </div>
+
+    </main>
+    <footer>
+      <div class="container">
+        <div class="cen">
+            <div class="col-md-12">
+                
+            </div>
+        </div>
+      </div>
+      <div id="copyright">
+            <div class="container">
+                <div class="cen">
+                    <div class="col-md-8">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+  </html>

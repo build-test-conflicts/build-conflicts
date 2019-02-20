@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build and Test Conflicts in The Wild</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script>
+        $(function(){
+            $("#includedContent").load("content.html");
+        });
+    </script>
+  </head>
+  <body style="font-family:verdana;">
+    <header>
+      <div class="top">
+		  <div class="container">
+		      <div class="row">
+		          <div class="col-sm-6">
+		              <p>Build Conflicts in The Wild</p>
+		          </div>
+		      </div>
+		  </div>
+		</div>
+		<nav class="navbar navbar-default">
+			<div class="container">
+			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
+		    	<ul class="nav navbar-nav main-navbar-nav">
+		        	<li class="active"><a href="main.html" title="">HOME</a></li>
+		        	<li class="dropdown">
+		            	<a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conflicts <span class="caret"></span></a>
+		            	<ul class="dropdown-menu">
+		                	<li><a href="build-conflicts.html" title="">Build Conflicts</a></li>
+		            	</ul>
+		        	</li>
+		        	<li><a href="sample.html" title="">Sample</a></li>
+		    	</ul>                           
+			</div>        
+			</div>
+		</nav>
+    </header>
+    <div class="bread_area">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                                    
+              </div>
+          </div>
+      </div>
+    </div>
+    <main class="site-main page-main">
+        <div class="container">
+            <div class="row">
+                <section class="page col-sm-9">
+                  <h2>Build Conflicts in The Wild</h2>
+                  <div class="abstract">
+                    <h4>Abstract:</h4>
+                    <p> 
+                    When collaborating, developers create and change software artifacts
+					without being aware of other team members work. While such
+					independence is essential for non-small teams increasing development
+					productivity, it might also result in conflicts when integrating
+					contributions. To better understand part of these conflicts— those
+					revealed by failures when building integrated code— we investigate
+					their frequency, structure, and adopted resolution patterns.
+					We analyze merge scenarios from more than 500 Java projects that
+					use Travis CI. To identify build conflicts, we select merge scenarios
+					from git repositories, parse the Travis logs generated when
+					building the commits in a scenario, and check whether the logged
+					error messages are related to the integrated changes. We find and
+					classify more than 640 build conflicts, and their resolution patterns.
+					Most build conflicts are caused by missing declarations removed
+					or renamed by one developer but referenced by the changes of
+					another developer. These conflicts are often resolved by removing
+					the dangling reference. We also identify build failures caused by
+					immediate post integration changes, often performed with the aim
+					of fixing merge conflicts. Based on the catalogue of build conflict
+					causes derived, awareness tools could alert developers about the
+					risk of a number of conflict situations. Program repair tools could
+					benefit from the derived catalogue of build conflict resolution patterns,
+					and the study infrastructure, to automatically fix conflicts.
+					Thus, we developed a prototype that recommends to developers
+					fixes for build conflicts.
+                  </div>
+
+                  <div class="study">
+                    <h4>Study Design</h4>
+                    <p>During this work, we design a study involving three main steps as illustrated bellow. The first step mines project repositories in GitHub and Travis for getting the information required for the experiment. The second step parses the Travis build logs of the collected scenarios to filter out scenarios with build breakages caused by non integration related causes such as execution timeout of the Travis services. Finally, the last step confirms conflict occurrence, and classifies conflicts and the adopted resolution patterns.
+                  </div>
+                  <div class="study">
+                    <h4>Results</h4>
+                    <ul>
+                      <li><a href="build-conflicts.html" title="">Build Conflicts</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="study">
+                    <h4>Broken Builds - Post Integration Changes</h4>
+                    <ul>
+                      <li><a href="problems-integrator-comp.html" title="">Compilation Problems</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="study">
+                    <h4>Approaches</h4>
+                    <ul>
+                      <li><a href="build-conflicts-identification.html" title="">Checking Build Conflicts</a></li>
+                      <li><a href="gumtree-diff.html" title="">Using Syntatic Diffs</a></li>
+                      <li><a href="resolution-patterns.html" title="">Identifying Fix Commit</a></li>
+                      <li><a href="bc-resolution.html" title="">Resolution Patterns of Build Conflicts</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="study">
+                    <h4> Replication, Data and Tool</h4>
+                    <ul>
+                      <li><a href="study-replication.html" title="" >Study Replication</a></li>
+                      <li><a href="repair-tool.html" title="" >Build Conflict Repair Prototype</a></li>
+                      <li><a href="sample.html" title="">Sample Dataset</a></li>
+                    </ul>
+                  </div>
+                  
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="cen">
+            <div class="col-md-12">
+                
+            </div>
+        </div>
+      </div>
+      <div id="copyright">
+            <div class="container">
+                <div class="cen">
+                    <div class="col-md-8">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+  </html>

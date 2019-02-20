@@ -1,0 +1,3632 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build Conflicts in The Wild</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body style="font-family:verdana;">
+    <header>
+      <div class="top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-6">
+                      <p>Build Conflicts in The Wild</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+            <ul class="nav navbar-nav main-navbar-nav">
+                <li class="active"><a href="main.html" title="">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conflicts <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="build-conflicts.html" title="">Build Conflicts</a></li>
+                    </ul>
+                </li>
+                <li><a href="sample.html" title="">Sample</a></li>
+            </ul>                           
+        </div>        
+      </div>
+    </nav>
+    </header>
+    <script type="text/javascript" src="exportCVS.js" ></script>
+    <div class="bread_area">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                  <ol class="breadcrumb">
+                      <li><a href="main.html">Home</a></li>
+                      <li class="active">Sample</li>
+                  </ol>                    
+              </div>
+          </div>
+      </div>
+    </div>
+    <main class="site-main page-main">
+        <div class="container">
+            <div class="row">
+                <section class="page col-sm-9">
+                  <h3>Sample</h3>
+                  <div class="abstract"> 
+                    We present here the set of projects we consider to run our study. <button onclick="exportTableToCSV('sample.csv')">Export Sample To CSV File</button>
+                    <p></p>
+                    <div class="alert alert-warning">
+                      <strong>Warning!</strong> Please, scroll the page to see all projects.
+                    </div>
+                  </div>
+            </div>
+            <div class="row">
+                <section class="page col-sm-9">
+                    <table class="build_conflicts">
+                      <thead>
+                        <tr>
+                          <th> Project Name </th>
+                          <th> Merge Scenarios (MS) </th>
+                          <th> MS Not Built </th>
+                          <th> Errored MS </th>
+                          <th> Failed MS </th>
+                        </tr>
+                      </thded>
+                      <tbody>
+                        <tr>
+                          <td> square/moshi </th>
+                          <td> 193 </td>
+                          <td> 67 </td>
+                          <td> 2 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> square/keywhiz </th>
+                          <td> 276 </td>
+                          <td> 77 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> objectify/objectify </th>
+                          <td> 19 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> vbauer/jackdaw </th>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> vbauer/caesar </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> mono/sharpen </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> cloudfoundry/cf-java-client </th>
+                          <td> 1350 </td>
+                          <td> 1150 </td>
+                          <td> 42 </td>
+                          <td> 102 </td>
+                        </tr>
+                        <tr>
+                          <td> davidmoten/rtree </th>
+                          <td> 29 </td>
+                          <td> 24 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> GlowstoneMC/Glowstone </th>
+                          <td> 130 </td>
+                          <td> 103 </td>
+                          <td> 7 </td>
+                          <td> 28 </td>
+                        </tr>
+                        <tr>
+                          <td> OfficeDev/ews-java-api </th>
+                          <td> 115 </td>
+                          <td> 71 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> spring-projects/spring-security-oauth </th>
+                          <td> 11 </td>
+                          <td> 8 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> gephi/gephi </th>
+                          <td> 93 </td>
+                          <td> 84 </td>
+                          <td> 14 </td>
+                          <td> 12 </td>
+                        </tr>
+                        <tr>
+                          <td> yasserg/crawler4j </th>
+                          <td> 64 </td>
+                          <td> 23 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> scribejava/scribejava </th>
+                          <td> 93 </td>
+                          <td> 39 </td>
+                          <td> 1 </td>
+                          <td> 10 </td>
+                        </tr>
+                        <tr>
+                          <td> neo4j/neo4j </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> AsyncHttpClient/async-http-client </th>
+                          <td> 27 </td>
+                          <td> 9 </td>
+                          <td> 0 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> weibocom/motan </th>
+                          <td> 108 </td>
+                          <td> 61 </td>
+                          <td> 7 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> java-native-access/jna </th>
+                          <td> 304 </td>
+                          <td> 130 </td>
+                          <td> 0 </td>
+                          <td> 12 </td>
+                        </tr>
+                        <tr>
+                          <td> netty/netty </th>
+                          <td> 17 </td>
+                          <td> 17 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> google/j2objc </th>
+                          <td> 85 </td>
+                          <td> 78 </td>
+                          <td> 3 </td>
+                          <td> 14 </td>
+                        </tr>
+                        <tr>
+                          <td> jhalterman/typetools </th>
+                          <td> 12 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> szegedi/dynalink </th>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> jooby-project/jooby </th>
+                          <td> 129 </td>
+                          <td> 16 </td>
+                          <td> 38 </td>
+                          <td> 48 </td>
+                        </tr>
+                        <tr>
+                          <td> rnewson/couchdb-lucene </th>
+                          <td> 17 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jhy/jsoup </th>
+                          <td> 64 </td>
+                          <td> 23 </td>
+                          <td> 2 </td>
+                          <td> 3 </td>
+                        </tr>
+                        <tr>
+                          <td> sculptor/sculptor </th>
+                          <td> 37 </td>
+                          <td> 25 </td>
+                          <td> 4 </td>
+                          <td> 16 </td>
+                        </tr>
+                        <tr>
+                          <td> OpenSmpp/opensmpp </th>
+                          <td> 8 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> mybatis/guice </th>
+                          <td> 79 </td>
+                          <td> 17 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> javanna/elasticshell </th>
+                          <td> 12 </td>
+                          <td> 12 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> owlike/genson </th>
+                          <td> 23 </td>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jqno/equalsverifier </th>
+                          <td> 274 </td>
+                          <td> 206 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> etsy/statsd-jvm-profiler </th>
+                          <td> 16 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> square/javapoet </th>
+                          <td> 268 </td>
+                          <td> 72 </td>
+                          <td> 8 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> liaohuqiu/SimpleHashSet </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> google/google-oauth-java-client </th>
+                          <td> 9 </td>
+                          <td> 6 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> google/google-http-java-client </th>
+                          <td> 4 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> javaparser/javaparser </th>
+                          <td> 1260 </td>
+                          <td> 710 </td>
+                          <td> 3 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> naver/pinpoint </th>
+                          <td> 1453 </td>
+                          <td> 16 </td>
+                          <td> 360 </td>
+                          <td> 120 </td>
+                        </tr>
+                        <tr>
+                          <td> javaee-samples/javaee7-samples </th>
+                          <td> 112 </td>
+                          <td> 72 </td>
+                          <td> 15 </td>
+                          <td> 87 </td>
+                        </tr>
+                        <tr>
+                          <td> mpetazzoni/ttorrent </th>
+                          <td> 44 </td>
+                          <td> 33 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> analytically/innerbuilder </th>
+                          <td> 9 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> linkedin/pinot </th>
+                          <td> 20 </td>
+                          <td> 11 </td>
+                          <td> 9 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> brettwooldridge/HikariCP </th>
+                          <td> 195 </td>
+                          <td> 134 </td>
+                          <td> 3 </td>
+                          <td> 19 </td>
+                        </tr>
+                        <tr>
+                          <td> Activiti/Activiti </th>
+                          <td> 76 </td>
+                          <td> 41 </td>
+                          <td> 9 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> twitter/distributedlog </th>
+                          <td> 10 </td>
+                          <td> 8 </td>
+                          <td> 3 </td>
+                          <td> 7 </td>
+                        </tr>
+                        <tr>
+                          <td> rest-assured/rest-assured </th>
+                          <td> 35 </td>
+                          <td> 14 </td>
+                          <td> 0 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-jr </th>
+                          <td> 23 </td>
+                          <td> 19 </td>
+                          <td> 3 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> rombert/desktop-maven-notifier </th>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> mp911de/logstash-gelf </th>
+                          <td> 14 </td>
+                          <td> 7 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> pagehelper/Mybatis-PageHelper </th>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> sanity/quickml </th>
+                          <td> 221 </td>
+                          <td> 53 </td>
+                          <td> 80 </td>
+                          <td> 24 </td>
+                        </tr>
+                        <tr>
+                          <td> pac4j/spring-security-pac4j </th>
+                          <td> 35 </td>
+                          <td> 8 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> hansenji/pocketknife </th>
+                          <td> 3 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> immutables/immutables </th>
+                          <td> 140 </td>
+                          <td> 78 </td>
+                          <td> 0 </td>
+                          <td> 24 </td>
+                        </tr>
+                        <tr>
+                          <td> HubSpot/jinjava </th>
+                          <td> 172 </td>
+                          <td> 100 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> graphaware/neo4j-reco </th>
+                          <td> 14 </td>
+                          <td> 7 </td>
+                          <td> 2 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> SpoutDev/Vanilla </th>
+                          <td> 21 </td>
+                          <td> 8 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> goodow/realtime-store </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> cloudfoundry/java-buildpack-auto-reconfiguration </th>
+                          <td> 50 </td>
+                          <td> 14 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> kzwang/elasticsearch-image </th>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> jOOQ/jOOL </th>
+                          <td> 53 </td>
+                          <td> 12 </td>
+                          <td> 7 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> 4pr0n/ripme </th>
+                          <td> 42 </td>
+                          <td> 19 </td>
+                          <td> 6 </td>
+                          <td> 44 </td>
+                        </tr>
+                        <tr>
+                          <td> digitalfondue/lavagna </th>
+                          <td> 89 </td>
+                          <td> 87 </td>
+                          <td> 10 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> relayrides/pushy </th>
+                          <td> 201 </td>
+                          <td> 101 </td>
+                          <td> 12 </td>
+                          <td> 12 </td>
+                        </tr>
+                        <tr>
+                          <td> aerogear/aerogear-unifiedpush-server </th>
+                          <td> 539 </td>
+                          <td> 125 </td>
+                          <td> 18 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> languagetool-org/languagetool </th>
+                          <td> 253 </td>
+                          <td> 234 </td>
+                          <td> 1 </td>
+                          <td> 20 </td>
+                        </tr>
+                        <tr>
+                          <td> yegor256/xembly </th>
+                          <td> 6 </td>
+                          <td> 5 </td>
+                          <td> 2 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> google/auto </th>
+                          <td> 192 </td>
+                          <td> 51 </td>
+                          <td> 0 </td>
+                          <td> 16 </td>
+                        </tr>
+                        <tr>
+                          <td> mesos/hadoop </th>
+                          <td> 21 </td>
+                          <td> 7 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> bytedeco/javacpp </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> OpenFeign/feign </th>
+                          <td> 78 </td>
+                          <td> 19 </td>
+                          <td> 0 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> bonnyfone/vectalign </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> arturmkrtchyan/iban4j </th>
+                          <td> 8 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> siom79/japicmp </th>
+                          <td> 79 </td>
+                          <td> 54 </td>
+                          <td> 12 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> mgodave/barge </th>
+                          <td> 52 </td>
+                          <td> 23 </td>
+                          <td> 19 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> torakiki/sejda </th>
+                          <td> 23 </td>
+                          <td> 19 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> corydissinger/raw4j </th>
+                          <td> 15 </td>
+                          <td> 8 </td>
+                          <td> 1 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> resty-gwt/resty-gwt </th>
+                          <td> 94 </td>
+                          <td> 41 </td>
+                          <td> 10 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> yusuke/twitter4j </th>
+                          <td> 5 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> searls/jasmine-maven-plugin </th>
+                          <td> 51 </td>
+                          <td> 20 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> brianfrankcooper/YCSB </th>
+                          <td> 279 </td>
+                          <td> 11 </td>
+                          <td> 11 </td>
+                          <td> 20 </td>
+                        </tr>
+                        <tr>
+                          <td> brooklyncentral/clocker </th>
+                          <td> 220 </td>
+                          <td> 112 </td>
+                          <td> 10 </td>
+                          <td> 15 </td>
+                        </tr>
+                        <tr>
+                          <td> reficio/soap-ws </th>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> pulse00/Twig-Eclipse-Plugin </th>
+                          <td> 8 </td>
+                          <td> 6 </td>
+                          <td> 1 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> Athou/commafeed </th>
+                          <td> 58 </td>
+                          <td> 13 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> cryptomator/cryptomator </th>
+                          <td> 145 </td>
+                          <td> 97 </td>
+                          <td> 3 </td>
+                          <td> 15 </td>
+                        </tr>
+                        <tr>
+                          <td> spring-projects/spring-petclinic </th>
+                          <td> 35 </td>
+                          <td> 17 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> sqshq/PiggyMetrics </th>
+                          <td> 16 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/hive </th>
+                          <td> 91 </td>
+                          <td> 90 </td>
+                          <td> 0 </td>
+                          <td> 43 </td>
+                        </tr>
+                        <tr>
+                          <td> VerbalExpressions/JavaVerbalExpressions </th>
+                          <td> 27 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> alibaba/java-dns-cache-manipulator </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> CloudSlang/score </th>
+                          <td> 163 </td>
+                          <td> 62 </td>
+                          <td> 2 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> nativelibs4java/BridJ </th>
+                          <td> 7 </td>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> effektif/effektif </th>
+                          <td> 91 </td>
+                          <td> 79 </td>
+                          <td> 3 </td>
+                          <td> 14 </td>
+                        </tr>
+                        <tr>
+                          <td> mrwilson/java-dirty </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> locationtech/udig-platform </th>
+                          <td> 36 </td>
+                          <td> 24 </td>
+                          <td> 14 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/incubator-samoa </th>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> sematext/HBaseHUT </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> JodaOrg/joda-time </th>
+                          <td> 73 </td>
+                          <td> 21 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> tcurdt/jdeb </th>
+                          <td> 61 </td>
+                          <td> 25 </td>
+                          <td> 6 </td>
+                          <td> 5 </td>
+                        </tr>
+                        <tr>
+                          <td> mitreid-connect/OpenID-Connect-Java-Spring-Server </th>
+                          <td> 76 </td>
+                          <td> 61 </td>
+                          <td> 22 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> traccar/traccar </th>
+                          <td> 469 </td>
+                          <td> 268 </td>
+                          <td> 16 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> owlcs/owlapi </th>
+                          <td> 70 </td>
+                          <td> 32 </td>
+                          <td> 4 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> scobal/seyren </th>
+                          <td> 135 </td>
+                          <td> 56 </td>
+                          <td> 4 </td>
+                          <td> 10 </td>
+                        </tr>
+                        <tr>
+                          <td> zxing/zxing </th>
+                          <td> 75 </td>
+                          <td> 17 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> weld/core </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> thinkaurelius/faunus </th>
+                          <td> 31 </td>
+                          <td> 29 </td>
+                          <td> 11 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> linkedin/parseq </th>
+                          <td> 59 </td>
+                          <td> 17 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> square/dagger </th>
+                          <td> 359 </td>
+                          <td> 212 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> Berico-Technologies/CLAVIN </th>
+                          <td> 36 </td>
+                          <td> 14 </td>
+                          <td> 8 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> lemire/JavaFastPFOR </th>
+                          <td> 20 </td>
+                          <td> 11 </td>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> ActiveJpa/activejpa </th>
+                          <td> 12 </td>
+                          <td> 9 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> marschall/memoryfilesystem </th>
+                          <td> 31 </td>
+                          <td> 27 </td>
+                          <td> 2 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> thrau/jarchivelib </th>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> jberkel/pay-me </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> AdoptOpenJDK/lambda-tutorial </th>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> caspark/eclipse-multicursor </th>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Slim3/slim3 </th>
+                          <td> 7 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> forge/core </th>
+                          <td> 37 </td>
+                          <td> 37 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> alecgorge/jsonapi </th>
+                          <td> 38 </td>
+                          <td> 15 </td>
+                          <td> 7 </td>
+                          <td> 5 </td>
+                        </tr>
+                        <tr>
+                          <td> MilkBowl/Vault </th>
+                          <td> 8 </td>
+                          <td> 3 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> square/otto </th>
+                          <td> 72 </td>
+                          <td> 20 </td>
+                          <td> 23 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> vvakame/JsonPullParser </th>
+                          <td> 32 </td>
+                          <td> 12 </td>
+                          <td> 3 </td>
+                          <td> 12 </td>
+                        </tr>
+                        <tr>
+                          <td> qos-ch/logback </th>
+                          <td> 65 </td>
+                          <td> 44 </td>
+                          <td> 3 </td>
+                          <td> 21 </td>
+                        </tr>
+                        <tr>
+                          <td> write2munish/Akka-Essentials </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jOOQ/jOOX </th>
+                          <td> 10 </td>
+                          <td> 4 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> myabc/markdownj </th>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> serso/android-common </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> tinkerpop/pipes </th>
+                          <td> 7 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> maxcom/lorsource </th>
+                          <td> 349 </td>
+                          <td> 174 </td>
+                          <td> 23 </td>
+                          <td> 9 </td>
+                        </tr>
+                        <tr>
+                          <td> ktoso/maven-git-commit-id-plugin </th>
+                          <td> 126 </td>
+                          <td> 26 </td>
+                          <td> 2 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> ryantenney/metrics-spring </th>
+                          <td> 43 </td>
+                          <td> 21 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> rtyley/roboguice-sherlock </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Hidendra/LWC </th>
+                          <td> 13 </td>
+                          <td> 9 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> jOOQ/jOOQ </th>
+                          <td> 133 </td>
+                          <td> 96 </td>
+                          <td> 34 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> jsimone/webapp-runner </th>
+                          <td> 37 </td>
+                          <td> 30 </td>
+                          <td> 5 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> julianhyde/linq4j </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> square/retrofit </th>
+                          <td> 556 </td>
+                          <td> 168 </td>
+                          <td> 0 </td>
+                          <td> 12 </td>
+                        </tr>
+                        <tr>
+                          <td> geotools/geotools </th>
+                          <td> 1242 </td>
+                          <td> 203 </td>
+                          <td> 178 </td>
+                          <td> 510 </td>
+                        </tr>
+                        <tr>
+                          <td> otale/tale </th>
+                          <td> 57 </td>
+                          <td> 33 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> bytedeco/javacv </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jhalterman/failsafe </th>
+                          <td> 15 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> chewiebug/GCViewer </th>
+                          <td> 25 </td>
+                          <td> 17 </td>
+                          <td> 0 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> ninjaframework/ninja </th>
+                          <td> 105 </td>
+                          <td> 38 </td>
+                          <td> 1 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> hs-web/hsweb-framework </th>
+                          <td> 74 </td>
+                          <td> 20 </td>
+                          <td> 13 </td>
+                          <td> 16 </td>
+                        </tr>
+                        <tr>
+                          <td> eclipse-color-theme/eclipse-color-theme </th>
+                          <td> 14 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> sachin-handiekar/jInstagram </th>
+                          <td> 79 </td>
+                          <td> 9 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-annotations </th>
+                          <td> 28 </td>
+                          <td> 19 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> JakeWharton/DiskLruCache </th>
+                          <td> 21 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> SomMeri/less4j </th>
+                          <td> 23 </td>
+                          <td> 16 </td>
+                          <td> 1 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> winterstein/Eclipse-Markdown-Editor-Plugin </th>
+                          <td> 16 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> stratosphere/stratosphere </th>
+                          <td> 50 </td>
+                          <td> 28 </td>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> JavaMoney/jsr354-api </th>
+                          <td> 28 </td>
+                          <td> 18 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> eirslett/frontend-maven-plugin </th>
+                          <td> 132 </td>
+                          <td> 49 </td>
+                          <td> 1 </td>
+                          <td> 3 </td>
+                        </tr>
+                        <tr>
+                          <td> kuujo/vertigo </th>
+                          <td> 2 </td>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> VCNC/haeinsa </th>
+                          <td> 19 </td>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> sanity/LastCalc </th>
+                          <td> 6 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jhalterman/expiringmap </th>
+                          <td> 8 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-datatype-joda </th>
+                          <td> 31 </td>
+                          <td> 20 </td>
+                          <td> 3 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> ThreeTen/threeten-extra </th>
+                          <td> 31 </td>
+                          <td> 11 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Simmetrics/simmetrics </th>
+                          <td> 36 </td>
+                          <td> 25 </td>
+                          <td> 17 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> brettwooldridge/SansOrm </th>
+                          <td> 14 </td>
+                          <td> 11 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> olap4j/olap4j </th>
+                          <td> 4 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> tbroyer/gwt-maven-plugin </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> wuman/AndroidImageLoader </th>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> zenobase/geocluster-facet </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> checkstyle/checkstyle </th>
+                          <td> 12 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> google/compile-testing </th>
+                          <td> 32 </td>
+                          <td> 9 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-datatype-hibernate </th>
+                          <td> 17 </td>
+                          <td> 10 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> eXist-db/exist </th>
+                          <td> 1011 </td>
+                          <td> 104 </td>
+                          <td> 215 </td>
+                          <td> 155 </td>
+                        </tr>
+                        <tr>
+                          <td> threerings/playn </th>
+                          <td> 13 </td>
+                          <td> 13 </td>
+                          <td> 8 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> basho/riak-java-client </th>
+                          <td> 387 </td>
+                          <td> 296 </td>
+                          <td> 45 </td>
+                          <td> 33 </td>
+                        </tr>
+                        <tr>
+                          <td> goldmansachs/gs-collections </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> kevinsawicki/wishlist </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-databind </th>
+                          <td> 775 </td>
+                          <td> 715 </td>
+                          <td> 132 </td>
+                          <td> 76 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-core </th>
+                          <td> 171 </td>
+                          <td> 136 </td>
+                          <td> 20 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> jmxtrans/jmxtrans </th>
+                          <td> 296 </td>
+                          <td> 118 </td>
+                          <td> 2 </td>
+                          <td> 41 </td>
+                        </tr>
+                        <tr>
+                          <td> wuman/JReadability </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> doanduyhai/Achilles </th>
+                          <td> 50 </td>
+                          <td> 27 </td>
+                          <td> 8 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> Yubico/ykneo-openpgp </th>
+                          <td> 8 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> lviggiano/owner </th>
+                          <td> 40 </td>
+                          <td> 22 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jeevatkm/digitalocean-api-java </th>
+                          <td> 17 </td>
+                          <td> 7 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> eveliotc/carbonite </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> sksamuel/elasticsearch-river-neo4j </th>
+                          <td> 12 </td>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> ppat/storm-rabbitmq </th>
+                          <td> 20 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> julman99/gson-fire </th>
+                          <td> 10 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> StripesFramework/stripes </th>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> bujiio/buji-pac4j </th>
+                          <td> 28 </td>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> usc/wechat-mp-sdk </th>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> nurkiewicz/LazySeq </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Adobe-Consulting-Services/acs-aem-commons </th>
+                          <td> 672 </td>
+                          <td> 524 </td>
+                          <td> 38 </td>
+                          <td> 15 </td>
+                        </tr>
+                        <tr>
+                          <td> indeedeng/proctor </th>
+                          <td> 95 </td>
+                          <td> 61 </td>
+                          <td> 7 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> iipc/openwayback </th>
+                          <td> 248 </td>
+                          <td> 179 </td>
+                          <td> 15 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> torakiki/pdfsam </th>
+                          <td> 10 </td>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> knowitall/reverb </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> dropwizard/dropwizard </th>
+                          <td> 778 </td>
+                          <td> 416 </td>
+                          <td> 8 </td>
+                          <td> 31 </td>
+                        </tr>
+                        <tr>
+                          <td> YannBrrd/elasticsearch-entity-resolution </th>
+                          <td> 21 </td>
+                          <td> 11 </td>
+                          <td> 1 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> jcabi/jcabi-aspects </th>
+                          <td> 58 </td>
+                          <td> 45 </td>
+                          <td> 6 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> threerings/getdown </th>
+                          <td> 28 </td>
+                          <td> 16 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> aled/jsi </th>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> sanity/tahrir </th>
+                          <td> 20 </td>
+                          <td> 19 </td>
+                          <td> 8 </td>
+                          <td> 17 </td>
+                        </tr>
+                        <tr>
+                          <td> rest-driver/rest-driver </th>
+                          <td> 43 </td>
+                          <td> 26 </td>
+                          <td> 0 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> helun/Ektorp </th>
+                          <td> 86 </td>
+                          <td> 48 </td>
+                          <td> 7 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/pdfbox </th>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> xetorthio/jedis </th>
+                          <td> 251 </td>
+                          <td> 150 </td>
+                          <td> 1 </td>
+                          <td> 85 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/storm </th>
+                          <td> 2332 </td>
+                          <td> 2049 </td>
+                          <td> 197 </td>
+                          <td> 378 </td>
+                        </tr>
+                        <tr>
+                          <td> swagger-api/swagger-core </th>
+                          <td> 873 </td>
+                          <td> 450 </td>
+                          <td> 91 </td>
+                          <td> 47 </td>
+                        </tr>
+                        <tr>
+                          <td> eclipse/che </th>
+                          <td> 1189 </td>
+                          <td> 762 </td>
+                          <td> 0 </td>
+                          <td> 263 </td>
+                        </tr>
+                        <tr>
+                          <td> square/wire </th>
+                          <td> 507 </td>
+                          <td> 132 </td>
+                          <td> 3 </td>
+                          <td> 18 </td>
+                        </tr>
+                        <tr>
+                          <td> jwtk/jjwt </th>
+                          <td> 97 </td>
+                          <td> 40 </td>
+                          <td> 0 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> l0rdn1kk0n/wicket-bootstrap </th>
+                          <td> 338 </td>
+                          <td> 239 </td>
+                          <td> 147 </td>
+                          <td> 60 </td>
+                        </tr>
+                        <tr>
+                          <td> torodb/stampede </th>
+                          <td> 407 </td>
+                          <td> 309 </td>
+                          <td> 5 </td>
+                          <td> 13 </td>
+                        </tr>
+                        <tr>
+                          <td> chanjarster/weixin-java-tools </th>
+                          <td> 64 </td>
+                          <td> 40 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> poetix/protonpack </th>
+                          <td> 20 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> mybatis/jpetstore-6 </th>
+                          <td> 70 </td>
+                          <td> 7 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> mybatis/generator </th>
+                          <td> 163 </td>
+                          <td> 48 </td>
+                          <td> 2 </td>
+                          <td> 7 </td>
+                        </tr>
+                        <tr>
+                          <td> ralfstx/minimal-json </th>
+                          <td> 7 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> brianm/really-executable-jars-maven-plugin </th>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jOOQ/jOOU </th>
+                          <td> 6 </td>
+                          <td> 2 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-dataformat-yaml </th>
+                          <td> 30 </td>
+                          <td> 20 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> bkiers/Liqp </th>
+                          <td> 57 </td>
+                          <td> 17 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> ning/maven-duplicate-finder-plugin </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> threerings/tripleplay </th>
+                          <td> 6 </td>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> livingsocial/HiveSwarm </th>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> zeroturnaround/zt-zip </th>
+                          <td> 30 </td>
+                          <td> 13 </td>
+                          <td> 1 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> CloudifySource/cloudify </th>
+                          <td> 225 </td>
+                          <td> 27 </td>
+                          <td> 85 </td>
+                          <td> 86 </td>
+                        </tr>
+                        <tr>
+                          <td> perwendel/spark </th>
+                          <td> 228 </td>
+                          <td> 140 </td>
+                          <td> 2 </td>
+                          <td> 10 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/jackrabbit-oak </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jbehave/jbehave-core </th>
+                          <td> 4 </td>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> webbit/webbit </th>
+                          <td> 9 </td>
+                          <td> 5 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> qos-ch/slf4j </th>
+                          <td> 48 </td>
+                          <td> 21 </td>
+                          <td> 0 </td>
+                          <td> 3 </td>
+                        </tr>
+                        <tr>
+                          <td> magro/kryo-serializers </th>
+                          <td> 28 </td>
+                          <td> 7 </td>
+                          <td> 2 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> opensagres/xdocreport </th>
+                          <td> 65 </td>
+                          <td> 15 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> play/play-android </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Asquera/elasticsearch-http-basic </th>
+                          <td> 12 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> maxmind/geoip-api-java </th>
+                          <td> 17 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> dain/leveldb </th>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> before/uadetector </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> woorea/openstack-java-sdk </th>
+                          <td> 76 </td>
+                          <td> 43 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> caskdata/tephra </th>
+                          <td> 94 </td>
+                          <td> 27 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> square/burst </th>
+                          <td> 18 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> spring-cloud/spring-cloud-config </th>
+                          <td> 160 </td>
+                          <td> 125 </td>
+                          <td> 35 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> sd4324530/fastweixin </th>
+                          <td> 54 </td>
+                          <td> 47 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> zafarkhaja/jsemver </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> iluwatar/java-design-patterns </th>
+                          <td> 371 </td>
+                          <td> 251 </td>
+                          <td> 45 </td>
+                          <td> 58 </td>
+                        </tr>
+                        <tr>
+                          <td> xerial/sqlite-jdbc </th>
+                          <td> 111 </td>
+                          <td> 53 </td>
+                          <td> 4 </td>
+                          <td> 12 </td>
+                        </tr>
+                        <tr>
+                          <td> notnoop/java-apns </th>
+                          <td> 42 </td>
+                          <td> 23 </td>
+                          <td> 2 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> gwtbootstrap/gwt-bootstrap </th>
+                          <td> 95 </td>
+                          <td> 49 </td>
+                          <td> 11 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> super-csv/super-csv </th>
+                          <td> 30 </td>
+                          <td> 13 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> pac4j/play-pac4j </th>
+                          <td> 95 </td>
+                          <td> 25 </td>
+                          <td> 6 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> asciidocfx/AsciidocFX </th>
+                          <td> 161 </td>
+                          <td> 133 </td>
+                          <td> 38 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> expectedbehavior/gauges-android </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/drill </th>
+                          <td> 58 </td>
+                          <td> 58 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> dkunzler/esperandro </th>
+                          <td> 16 </td>
+                          <td> 12 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> trautonen/coveralls-maven-plugin </th>
+                          <td> 24 </td>
+                          <td> 15 </td>
+                          <td> 8 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> nurkiewicz/spring-data-jdbc-repository </th>
+                          <td> 6 </td>
+                          <td> 6 </td>
+                          <td> 4 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> dianping/cat </th>
+                          <td> 1293 </td>
+                          <td> 940 </td>
+                          <td> 79 </td>
+                          <td> 139 </td>
+                        </tr>
+                        <tr>
+                          <td> datastax/java-driver </th>
+                          <td> 432 </td>
+                          <td> 172 </td>
+                          <td> 37 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> paulhoule/infovore </th>
+                          <td> 24 </td>
+                          <td> 11 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Comcast/cmb </th>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> olivergierke/spring-restbucks </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> klout/brickhouse </th>
+                          <td> 9 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> androrm/androrm </th>
+                          <td> 3 </td>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Comcast/jrugged </th>
+                          <td> 23 </td>
+                          <td> 13 </td>
+                          <td> 0 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> yammer/tenacity </th>
+                          <td> 52 </td>
+                          <td> 18 </td>
+                          <td> 3 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> google/jimfs </th>
+                          <td> 12 </td>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> protostuff/protostuff </th>
+                          <td> 106 </td>
+                          <td> 36 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> adyliu/jafka </th>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> ocpsoft/rewrite </th>
+                          <td> 28 </td>
+                          <td> 10 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> asual/lesscss-engine </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> tinkerpop/blueprints </th>
+                          <td> 142 </td>
+                          <td> 109 </td>
+                          <td> 55 </td>
+                          <td> 30 </td>
+                        </tr>
+                        <tr>
+                          <td> searchbox-io/Jest </th>
+                          <td> 199 </td>
+                          <td> 122 </td>
+                          <td> 10 </td>
+                          <td> 68 </td>
+                        </tr>
+                        <tr>
+                          <td> guokr/simbase </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> palantir/eclipse-typescript </th>
+                          <td> 32 </td>
+                          <td> 18 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> nurkiewicz/async-retry </th>
+                          <td> 3 </td>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> easymock/objenesis </th>
+                          <td> 9 </td>
+                          <td> 4 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> graphaware/neo4j-framework </th>
+                          <td> 100 </td>
+                          <td> 82 </td>
+                          <td> 27 </td>
+                          <td> 42 </td>
+                        </tr>
+                        <tr>
+                          <td> OpenSextant/SolrTextTagger </th>
+                          <td> 15 </td>
+                          <td> 8 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> sps/mustache-spring-view </th>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> hdiv/hdiv </th>
+                          <td> 79 </td>
+                          <td> 78 </td>
+                          <td> 7 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> UISpec4J/UISpec4J </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jhalterman/concurrentunit </th>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> stefanbirkner/system-rules </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> xebia/Xebium </th>
+                          <td> 31 </td>
+                          <td> 21 </td>
+                          <td> 3 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> buddycloud/buddycloud-server-java </th>
+                          <td> 192 </td>
+                          <td> 128 </td>
+                          <td> 3 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> togglz/togglz </th>
+                          <td> 56 </td>
+                          <td> 25 </td>
+                          <td> 5 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> JakeWharton/salvage </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> logstash/log4j-jsonevent-layout </th>
+                          <td> 11 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jzy3d/jzy3d-api </th>
+                          <td> 22 </td>
+                          <td> 15 </td>
+                          <td> 3 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> pierre/meteo </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jruby/joni </th>
+                          <td> 19 </td>
+                          <td> 12 </td>
+                          <td> 0 </td>
+                          <td> 10 </td>
+                        </tr>
+                        <tr>
+                          <td> ganglia/jmxetric </th>
+                          <td> 14 </td>
+                          <td> 1 </td>
+                          <td> 10 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> karussell/snacktory </th>
+                          <td> 17 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> kevinsawicki/http-request </th>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> caelum/vraptor </th>
+                          <td> 86 </td>
+                          <td> 52 </td>
+                          <td> 9 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> DiUS/java-faker </th>
+                          <td> 48 </td>
+                          <td> 21 </td>
+                          <td> 10 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> pac4j/pac4j </th>
+                          <td> 506 </td>
+                          <td> 237 </td>
+                          <td> 19 </td>
+                          <td> 16 </td>
+                        </tr>
+                        <tr>
+                          <td> pedrovgs/Algorithms </th>
+                          <td> 13 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Graphify/graphify </th>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> wix/petri </th>
+                          <td> 17 </td>
+                          <td> 8 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> google/guava </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> sstone/akka-amqp-proxies </th>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> toomasr/skype-bot </th>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> koraktor/steam-condenser-java </th>
+                          <td> 19 </td>
+                          <td> 14 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> bbeck/token-bucket </th>
+                          <td> 4 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Findwise/Hydra </th>
+                          <td> 114 </td>
+                          <td> 59 </td>
+                          <td> 3 </td>
+                          <td> 18 </td>
+                        </tr>
+                        <tr>
+                          <td> mikaelhg/urlbuilder </th>
+                          <td> 14 </td>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> organicveggie/metrics-statsd </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> tumblr/jumblr </th>
+                          <td> 33 </td>
+                          <td> 20 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> mybatis/mybatis-3 </th>
+                          <td> 341 </td>
+                          <td> 130 </td>
+                          <td> 14 </td>
+                          <td> 11 </td>
+                        </tr>
+                        <tr>
+                          <td> undera/jmeter-plugins </th>
+                          <td> 195 </td>
+                          <td> 152 </td>
+                          <td> 39 </td>
+                          <td> 34 </td>
+                        </tr>
+                        <tr>
+                          <td> mybatis/spring </th>
+                          <td> 112 </td>
+                          <td> 23 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> roboguice/roboguice </th>
+                          <td> 103 </td>
+                          <td> 39 </td>
+                          <td> 14 </td>
+                          <td> 9 </td>
+                        </tr>
+                        <tr>
+                          <td> CorfuDB/CorfuDB </th>
+                          <td> 610 </td>
+                          <td> 312 </td>
+                          <td> 16 </td>
+                          <td> 12 </td>
+                        </tr>
+                        <tr>
+                          <td> martinpaljak/GlobalPlatformPro </th>
+                          <td> 5 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jparsec/jparsec </th>
+                          <td> 36 </td>
+                          <td> 27 </td>
+                          <td> 7 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> spring-cloud/spring-cloud-consul </th>
+                          <td> 80 </td>
+                          <td> 42 </td>
+                          <td> 10 </td>
+                          <td> 5 </td>
+                        </tr>
+                        <tr>
+                          <td> tbroyer/bullet </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> lookfirst/sardine </th>
+                          <td> 50 </td>
+                          <td> 22 </td>
+                          <td> 0 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> penberg/fjord </th>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Esri/spatial-framework-for-hadoop </th>
+                          <td> 32 </td>
+                          <td> 14 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Esri/geometry-api-java </th>
+                          <td> 43 </td>
+                          <td> 17 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> TannerPerrien/picasso-transformations </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> knightliao/disconf </th>
+                          <td> 55 </td>
+                          <td> 48 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> tuenti/SmsRadar </th>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> google/closure-compiler </th>
+                          <td> 274 </td>
+                          <td> 185 </td>
+                          <td> 9 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> querydsl/querydsl </th>
+                          <td> 761 </td>
+                          <td> 563 </td>
+                          <td> 53 </td>
+                          <td> 137 </td>
+                        </tr>
+                        <tr>
+                          <td> cglib/cglib </th>
+                          <td> 36 </td>
+                          <td> 7 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> caelum/mamute </th>
+                          <td> 122 </td>
+                          <td> 70 </td>
+                          <td> 0 </td>
+                          <td> 18 </td>
+                        </tr>
+                        <tr>
+                          <td> igniterealtime/Openfire </th>
+                          <td> 694 </td>
+                          <td> 458 </td>
+                          <td> 0 </td>
+                          <td> 30 </td>
+                        </tr>
+                        <tr>
+                          <td> devnied/EMV-NFC-Paycard-Enrollment </th>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> oxo42/stateless4j </th>
+                          <td> 25 </td>
+                          <td> 10 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jirutka/spring-rest-exception-handler </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> stephanenicolas/robospice </th>
+                          <td> 50 </td>
+                          <td> 35 </td>
+                          <td> 25 </td>
+                          <td> 10 </td>
+                        </tr>
+                        <tr>
+                          <td> psi-probe/psi-probe </th>
+                          <td> 487 </td>
+                          <td> 52 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> OryxProject/oryx </th>
+                          <td> 100 </td>
+                          <td> 10 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> sockeqwe/fragmentargs </th>
+                          <td> 18 </td>
+                          <td> 6 </td>
+                          <td> 1 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> google/guice </th>
+                          <td> 73 </td>
+                          <td> 14 </td>
+                          <td> 0 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> spotify/docker-maven-plugin </th>
+                          <td> 113 </td>
+                          <td> 86 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> ObeoNetwork/UML-Designer </th>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> google/truth </th>
+                          <td> 94 </td>
+                          <td> 34 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> databricks/learning-spark </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> spotify/helios </th>
+                          <td> 864 </td>
+                          <td> 831 </td>
+                          <td> 13 </td>
+                          <td> 29 </td>
+                        </tr>
+                        <tr>
+                          <td> spotify/docker-client </th>
+                          <td> 483 </td>
+                          <td> 333 </td>
+                          <td> 21 </td>
+                          <td> 64 </td>
+                        </tr>
+                        <tr>
+                          <td> xtreemfs/xtreemfs </th>
+                          <td> 372 </td>
+                          <td> 93 </td>
+                          <td> 31 </td>
+                          <td> 78 </td>
+                        </tr>
+                        <tr>
+                          <td> damnhandy/Handy-URI-Templates </th>
+                          <td> 29 </td>
+                          <td> 4 </td>
+                          <td> 3 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> b3log/solo </th>
+                          <td> 322 </td>
+                          <td> 20 </td>
+                          <td> 21 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> hcoles/pitest </th>
+                          <td> 113 </td>
+                          <td> 26 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> rhuss/docker-maven-plugin </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> kite-sdk/kite </th>
+                          <td> 80 </td>
+                          <td> 3 </td>
+                          <td> 15 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> openpnp/openpnp </th>
+                          <td> 475 </td>
+                          <td> 341 </td>
+                          <td> 7 </td>
+                          <td> 49 </td>
+                        </tr>
+                        <tr>
+                          <td> CamelCookbook/camel-cookbook-examples </th>
+                          <td> 19 </td>
+                          <td> 13 </td>
+                          <td> 7 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> zhangkaitao/es </th>
+                          <td> 11 </td>
+                          <td> 5 </td>
+                          <td> 3 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> wstrange/GoogleAuth </th>
+                          <td> 18 </td>
+                          <td> 4 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> twitter/hpack </th>
+                          <td> 4 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> gwtbootstrap3/gwtbootstrap3 </th>
+                          <td> 161 </td>
+                          <td> 53 </td>
+                          <td> 1 </td>
+                          <td> 23 </td>
+                        </tr>
+                        <tr>
+                          <td> plantuml/plantuml </th>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> ronmamo/reflections </th>
+                          <td> 28 </td>
+                          <td> 14 </td>
+                          <td> 0 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> guari/eclipse-ui-theme </th>
+                          <td> 10 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> kongchen/swagger-maven-plugin </th>
+                          <td> 175 </td>
+                          <td> 83 </td>
+                          <td> 32 </td>
+                          <td> 14 </td>
+                        </tr>
+                        <tr>
+                          <td> jamesdbloom/mockserver </th>
+                          <td> 64 </td>
+                          <td> 45 </td>
+                          <td> 2 </td>
+                          <td> 10 </td>
+                        </tr>
+                        <tr>
+                          <td> trecloux/yeoman-maven-plugin </th>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jsonld-java/jsonld-java </th>
+                          <td> 73 </td>
+                          <td> 34 </td>
+                          <td> 15 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> spotify/netty-zmtp </th>
+                          <td> 13 </td>
+                          <td> 4 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> maxmind/GeoIP2-java </th>
+                          <td> 40 </td>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> bitsofproof/supernode </th>
+                          <td> 28 </td>
+                          <td> 25 </td>
+                          <td> 7 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> f2prateek/progressbutton </th>
+                          <td> 11 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> gresrun/jesque </th>
+                          <td> 33 </td>
+                          <td> 12 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/accumulo </th>
+                          <td> 586 </td>
+                          <td> 583 </td>
+                          <td> 42 </td>
+                          <td> 80 </td>
+                        </tr>
+                        <tr>
+                          <td> airlift/airlift </th>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> adamfisk/LittleProxy </th>
+                          <td> 139 </td>
+                          <td> 87 </td>
+                          <td> 9 </td>
+                          <td> 18 </td>
+                        </tr>
+                        <tr>
+                          <td> caelum/caelum-stella </th>
+                          <td> 41 </td>
+                          <td> 19 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/aalto-xml </th>
+                          <td> 7 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> mfornos/humanize </th>
+                          <td> 8 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> cosmin/IClojure </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> code4craft/webmagic </th>
+                          <td> 106 </td>
+                          <td> 19 </td>
+                          <td> 20 </td>
+                          <td> 9 </td>
+                        </tr>
+                        <tr>
+                          <td> ontop/ontop </th>
+                          <td> 1363 </td>
+                          <td> 891 </td>
+                          <td> 50 </td>
+                          <td> 144 </td>
+                        </tr>
+                        <tr>
+                          <td> TheHolyWaffle/TeamSpeak-3-Java-API </th>
+                          <td> 8 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> awslabs/route53-infima </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jcabi/jcabi-github </th>
+                          <td> 245 </td>
+                          <td> 208 </td>
+                          <td> 43 </td>
+                          <td> 174 </td>
+                        </tr>
+                        <tr>
+                          <td> jreijn/spring-comparing-template-engines </th>
+                          <td> 11 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> uaihebert/uaicontacts </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> ripple/ripple-lib-java </th>
+                          <td> 10 </td>
+                          <td> 4 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Spoutcraft/LegacyLauncher </th>
+                          <td> 6 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> square/seismic </th>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> ArcBees/GWTP </th>
+                          <td> 69 </td>
+                          <td> 36 </td>
+                          <td> 31 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jacoco/jacoco </th>
+                          <td> 85 </td>
+                          <td> 35 </td>
+                          <td> 9 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-dataformat-csv </th>
+                          <td> 45 </td>
+                          <td> 33 </td>
+                          <td> 1 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> square/pollexor </th>
+                          <td> 21 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> restlet/restlet-framework-java </th>
+                          <td> 157 </td>
+                          <td> 106 </td>
+                          <td> 1 </td>
+                          <td> 101 </td>
+                        </tr>
+                        <tr>
+                          <td> square/okhttp </th>
+                          <td> 1635 </td>
+                          <td> 800 </td>
+                          <td> 171 </td>
+                          <td> 259 </td>
+                        </tr>
+                        <tr>
+                          <td> neuland/jade4j </th>
+                          <td> 41 </td>
+                          <td> 11 </td>
+                          <td> 4 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> pulse00/Symfony-2-Eclipse-Plugin </th>
+                          <td> 19 </td>
+                          <td> 13 </td>
+                          <td> 6 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> neophob/PixelController </th>
+                          <td> 39 </td>
+                          <td> 33 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> smooks/smooks </th>
+                          <td> 12 </td>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> DSpace/DSpace </th>
+                          <td> 1398 </td>
+                          <td> 104 </td>
+                          <td> 27 </td>
+                          <td> 107 </td>
+                        </tr>
+                        <tr>
+                          <td> NLPchina/elasticsearch-sql </th>
+                          <td> 141 </td>
+                          <td> 43 </td>
+                          <td> 18 </td>
+                          <td> 17 </td>
+                        </tr>
+                        <tr>
+                          <td> vavr-io/vavr </th>
+                          <td> 1137 </td>
+                          <td> 68 </td>
+                          <td> 20 </td>
+                          <td> 18 </td>
+                        </tr>
+                        <tr>
+                          <td> nodebox/nodebox </th>
+                          <td> 76 </td>
+                          <td> 65 </td>
+                          <td> 8 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> airlift/airline </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> mikera/clisk </th>
+                          <td> 9 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> killme2008/Metamorphosis </th>
+                          <td> 13 </td>
+                          <td> 11 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> MoriTanosuke/glacieruploader </th>
+                          <td> 15 </td>
+                          <td> 10 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jeluard/semantic-versioning </th>
+                          <td> 26 </td>
+                          <td> 6 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> resthub/springmvc-router </th>
+                          <td> 29 </td>
+                          <td> 13 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jOOQ/jOOR </th>
+                          <td> 18 </td>
+                          <td> 9 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> graphaware/neo4j-timetree </th>
+                          <td> 36 </td>
+                          <td> 9 </td>
+                          <td> 10 </td>
+                          <td> 5 </td>
+                        </tr>
+                        <tr>
+                          <td> taweili/ardublock </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> twitter/cloudhopper-smpp </th>
+                          <td> 23 </td>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> RichardWarburton/lambda-behave </th>
+                          <td> 18 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> isaiah/jubilee </th>
+                          <td> 12 </td>
+                          <td> 2 </td>
+                          <td> 2 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> roundrop/facebook4j </th>
+                          <td> 65 </td>
+                          <td> 2 </td>
+                          <td> 23 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> CloudSlang/cloud-slang </th>
+                          <td> 836 </td>
+                          <td> 251 </td>
+                          <td> 26 </td>
+                          <td> 67 </td>
+                        </tr>
+                        <tr>
+                          <td> yegor256/s3auth </th>
+                          <td> 49 </td>
+                          <td> 8 </td>
+                          <td> 3 </td>
+                          <td> 47 </td>
+                        </tr>
+                        <tr>
+                          <td> coverity/coverity-security-library </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> metamx/druid </th>
+                          <td> 32 </td>
+                          <td> 32 </td>
+                          <td> 3 </td>
+                          <td> 12 </td>
+                        </tr>
+                        <tr>
+                          <td> adyliu/zkclient </th>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> jmock-developers/jmock-library </th>
+                          <td> 21 </td>
+                          <td> 9 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> mikera/vectorz </th>
+                          <td> 139 </td>
+                          <td> 95 </td>
+                          <td> 7 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-module-jsonSchema </th>
+                          <td> 36 </td>
+                          <td> 26 </td>
+                          <td> 1 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> julianhyde/optiq </th>
+                          <td> 8 </td>
+                          <td> 4 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> fabiomaffioletti/jsondoc </th>
+                          <td> 23 </td>
+                          <td> 12 </td>
+                          <td> 4 </td>
+                          <td> 1 </td>
+                        </tr>
+                        <tr>
+                          <td> cereda/arara </th>
+                          <td> 26 </td>
+                          <td> 9 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> pgjdbc/pgjdbc </th>
+                          <td> 167 </td>
+                          <td> 101 </td>
+                          <td> 2 </td>
+                          <td> 14 </td>
+                        </tr>
+                        <tr>
+                          <td> FasterXML/jackson-dataformat-xml </th>
+                          <td> 60 </td>
+                          <td> 49 </td>
+                          <td> 8 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> lemire/javaewah </th>
+                          <td> 37 </td>
+                          <td> 16 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> tinkerpop/frames </th>
+                          <td> 34 </td>
+                          <td> 18 </td>
+                          <td> 7 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> samskivert/jmustache </th>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> mpatric/mp3agic </th>
+                          <td> 26 </td>
+                          <td> 11 </td>
+                          <td> 2 </td>
+                          <td> 3 </td>
+                        </tr>
+                        <tr>
+                          <td> redline-smalltalk/redline-smalltalk </th>
+                          <td> 72 </td>
+                          <td> 51 </td>
+                          <td> 2 </td>
+                          <td> 32 </td>
+                        </tr>
+                        <tr>
+                          <td> thelinmichael/spotify-web-api-java </th>
+                          <td> 45 </td>
+                          <td> 23 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> shilad/wikibrain </th>
+                          <td> 266 </td>
+                          <td> 231 </td>
+                          <td> 109 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> codecentric/spring-boot-starter-batch-web </th>
+                          <td> 25 </td>
+                          <td> 12 </td>
+                          <td> 0 </td>
+                          <td> 5 </td>
+                        </tr>
+                        <tr>
+                          <td> clemp6r/futuroid </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/tajo </th>
+                          <td> 158 </td>
+                          <td> 158 </td>
+                          <td> 19 </td>
+                          <td> 50 </td>
+                        </tr>
+                        <tr>
+                          <td> FenixEdu/fenixedu-academic </th>
+                          <td> 1005 </td>
+                          <td> 731 </td>
+                          <td> 17 </td>
+                          <td> 14 </td>
+                        </tr>
+                        <tr>
+                          <td> welovecoding/editorconfig-netbeans </th>
+                          <td> 32 </td>
+                          <td> 11 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> greenmail-mail-test/greenmail </th>
+                          <td> 54 </td>
+                          <td> 44 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> OpenSOC/opensoc-streaming </th>
+                          <td> 25 </td>
+                          <td> 25 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> caskdata/coopr </th>
+                          <td> 836 </td>
+                          <td> 680 </td>
+                          <td> 89 </td>
+                          <td> 91 </td>
+                        </tr>
+                        <tr>
+                          <td> paukiatwee/budgetapp </th>
+                          <td> 10 </td>
+                          <td> 4 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jcabi/jcabi-ssh </th>
+                          <td> 6 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jmrozanec/cron-utils </th>
+                          <td> 201 </td>
+                          <td> 93 </td>
+                          <td> 8 </td>
+                          <td> 49 </td>
+                        </tr>
+                        <tr>
+                          <td> vdenotaris/spring-boot-security-saml-sample </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> mesos/storm </th>
+                          <td> 113 </td>
+                          <td> 33 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Kixeye/chassis </th>
+                          <td> 6 </td>
+                          <td> 5 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> matlux/jvm-breakglass </th>
+                          <td> 5 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Tillerino/Tillerinobot </th>
+                          <td> 29 </td>
+                          <td> 17 </td>
+                          <td> 0 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> alibaba/cobarclient </th>
+                          <td> 8 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> shyiko/mysql-binlog-connector-java </th>
+                          <td> 23 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> SpigotMC/BungeeCord </th>
+                          <td> 24 </td>
+                          <td> 9 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> atermenji/IconicDroid </th>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> davidmoten/geo </th>
+                          <td> 9 </td>
+                          <td> 4 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> alexxiyang/shiro-redis </th>
+                          <td> 16 </td>
+                          <td> 10 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> groupon/Selenium-Grid-Extras </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> robolectric/deckard-maven </th>
+                          <td> 9 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> forge/roaster </th>
+                          <td> 22 </td>
+                          <td> 14 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jcabi/jcabi-http </th>
+                          <td> 37 </td>
+                          <td> 23 </td>
+                          <td> 6 </td>
+                          <td> 29 </td>
+                        </tr>
+                        <tr>
+                          <td> jprante/elasticsearch-gatherer </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> smola/galimatias </th>
+                          <td> 7 </td>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> headissue/cache2k </th>
+                          <td> 5 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> HolmesNL/kafka-spout </th>
+                          <td> 11 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> recommenders/rival </th>
+                          <td> 26 </td>
+                          <td> 18 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> aaberg/sql2o </th>
+                          <td> 19 </td>
+                          <td> 8 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> kenglxn/QRGen </th>
+                          <td> 48 </td>
+                          <td> 17 </td>
+                          <td> 1 </td>
+                          <td> 7 </td>
+                        </tr>
+                        <tr>
+                          <td> jmkgreen/morphia </th>
+                          <td> 25 </td>
+                          <td> 10 </td>
+                          <td> 1 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> sarxos/webcam-capture </th>
+                          <td> 31 </td>
+                          <td> 4 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> JodaOrg/joda-beans </th>
+                          <td> 6 </td>
+                          <td> 2 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> reidarsollid/RustyCage </th>
+                          <td> 3 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> ajermakovics/eclipse-instasearch </th>
+                          <td> 9 </td>
+                          <td> 3 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/zeppelin </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Atmosphere/atmosphere </th>
+                          <td> 282 </td>
+                          <td> 154 </td>
+                          <td> 4 </td>
+                          <td> 84 </td>
+                        </tr>
+                        <tr>
+                          <td> antlr/antlr4 </th>
+                          <td> 735 </td>
+                          <td> 535 </td>
+                          <td> 137 </td>
+                          <td> 36 </td>
+                        </tr>
+                        <tr>
+                          <td> medcl/elasticsearch-analysis-ik </th>
+                          <td> 13 </td>
+                          <td> 11 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> apache/flink </th>
+                          <td> 3 </td>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> codecentric/spring-boot-admin </th>
+                          <td> 60 </td>
+                          <td> 34 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> justinsb/jetcd </th>
+                          <td> 3 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> microg/NetworkLocation </th>
+                          <td> 2 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> aws/aws-dynamodb-session-tomcat </th>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> jcgay/maven-color </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> brettwooldridge/NuProcess </th>
+                          <td> 23 </td>
+                          <td> 12 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> orientechnologies/spring-data-orientdb </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> davidmoten/rxjava-jdbc </th>
+                          <td> 24 </td>
+                          <td> 11 </td>
+                          <td> 1 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> redwarp/9-Patch-Resizer </th>
+                          <td> 7 </td>
+                          <td> 4 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> la-team/light-admin </th>
+                          <td> 15 </td>
+                          <td> 10 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> larsga/Duke </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> dropwizard/metrics </th>
+                          <td> 228 </td>
+                          <td> 15 </td>
+                          <td> 6 </td>
+                          <td> 24 </td>
+                        </tr>
+                        <tr>
+                          <td> IDPF/epubcheck </th>
+                          <td> 81 </td>
+                          <td> 1 </td>
+                          <td> 2 </td>
+                          <td> 4 </td>
+                        </tr>
+                        <tr>
+                          <td> twilio/twilio-java </th>
+                          <td> 238 </td>
+                          <td> 167 </td>
+                          <td> 10 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> Multiverse/Multiverse-Core </th>
+                          <td> 9 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> resthub/resthub-spring-stack </th>
+                          <td> 128 </td>
+                          <td> 50 </td>
+                          <td> 15 </td>
+                          <td> 10 </td>
+                        </tr>
+                        <tr>
+                          <td> essentials/Essentials </th>
+                          <td> 133 </td>
+                          <td> 83 </td>
+                          <td> 1 </td>
+                          <td> 40 </td>
+                        </tr>
+                        <tr>
+                          <td> springside/springside4 </th>
+                          <td> 32 </td>
+                          <td> 22 </td>
+                          <td> 4 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> dynjs/dynjs </th>
+                          <td> 53 </td>
+                          <td> 19 </td>
+                          <td> 9 </td>
+                          <td> 6 </td>
+                        </tr>
+                        <tr>
+                          <td> SpoutDev/Spout </th>
+                          <td> 64 </td>
+                          <td> 36 </td>
+                          <td> 5 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> salyh/elasticsearch-security-plugin </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> addthis/stream-lib </th>
+                          <td> 42 </td>
+                          <td> 20 </td>
+                          <td> 1 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> drrb/java-rust-example </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> Spoutcraft/Spoutcraft </th>
+                          <td> 14 </td>
+                          <td> 13 </td>
+                          <td> 8 </td>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <td> reficio/p2-maven-plugin </th>
+                          <td> 22 </td>
+                          <td> 5 </td>
+                          <td> 2 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> structr/structr </th>
+                          <td> 1309 </td>
+                          <td> 1287 </td>
+                          <td> 38 </td>
+                          <td> 302 </td>
+                        </tr>
+                        <tr>
+                          <td> hstaudacher/osgi-jax-rs-connector </th>
+                          <td> 23 </td>
+                          <td> 11 </td>
+                          <td> 0 </td>
+                          <td> 8 </td>
+                        </tr>
+                        <tr>
+                          <td> gwt-maven-plugin/gwt-maven-plugin </th>
+                          <td> 7 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                        <tr>
+                          <td> madeye/proxydroid </th>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                          <td> 0 </td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+            
+        </div>
+        </div>
+      <div id="copyright">
+            <div class="container">
+                <div class="cen">
+                    <div class="col-md-8">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+  </html>
